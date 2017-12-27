@@ -1,0 +1,11 @@
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\bin\Debug\QuanLyThuTienHoc.exe.config
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\bin\Debug\QuanLyThuTienHoc.exe
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\bin\Debug\QuanLyThuTienHoc.pdb
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Form1.resources
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Properties.Resources.resources
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.csproj.GenerateResource.Cache
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.exe
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.pdb
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Forms.frmQuanLyMucHocPhi.resources
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.csprojResolveAssemblyReference.cache
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Forms.frmQLDongHocPhi.resources
