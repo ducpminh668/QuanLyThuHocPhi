@@ -14,7 +14,6 @@ namespace QuanLyThuTienHoc
         private string connectionString = Configuration.connectionString;
         private SqlConnection conn;
         private SqlDataAdapter adapter;
-        private List<SinhVien> lstSinhVien = new List<SinhVien>();
         private DataSet dataSet = new DataSet();
         private string flagAction = "";
 

@@ -9,3 +9,4 @@ C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuT
 C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Forms.frmQuanLyMucHocPhi.resources
 C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.csprojResolveAssemblyReference.cache
 C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Forms.frmQLDongHocPhi.resources
+C:\Users\ducpm\Desktop\C#\QuanLyThuTienHoc\QuanLyThuTienHoc\obj\Debug\QuanLyThuTienHoc.Forms.frmChiTietBienLai.resources

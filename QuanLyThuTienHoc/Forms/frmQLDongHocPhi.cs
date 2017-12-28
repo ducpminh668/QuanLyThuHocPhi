@@ -86,5 +86,23 @@ namespace QuanLyThuTienHoc.Forms
                 conn.Close();
             }
         }
+
+        private void dataGridSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgvSinhVien = sender as DataGridView;
+            bindingSVToTextbox(dgvSinhVien.CurrentRow);
+        }
+
+        private void bindingSVToTextbox(DataGridViewRow currentRow)
+        {
+            txtMaSV.Text = currentRow.Cells[0].Value.ToString();
+            txtTenSV.Text = currentRow.Cells[1].Value.ToString();
+        }
+
+        private void btnInBienLai_Click(object sender, EventArgs e)
+        {
+            frmChiTietBienLai frmCT = new frmChiTietBienLai(txtMaSV.Text, txtTenSV.Text,Convert.ToInt32(cbHocKy.SelectedItem));
+            frmCT.ShowDialog();
+        }
     }
 }
