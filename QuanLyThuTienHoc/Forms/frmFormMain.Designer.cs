@@ -178,7 +178,6 @@
             this.dataGridSinhVien.Size = new System.Drawing.Size(602, 244);
             this.dataGridSinhVien.TabIndex = 20;
             this.dataGridSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSinhVien_CellClick);
-            this.dataGridSinhVien.SelectionChanged += new System.EventHandler(this.dataGridSinhVien_SelectionChanged);
             // 
             // txtTen
             // 

@@ -1,8 +1,6 @@
 ﻿using QuanLyThuTienHoc.Forms;
 using QuanLyThuTienHoc.Functions;
-using QuanLyThuTienHoc.Model;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -264,9 +262,6 @@ namespace QuanLyThuTienHoc
             frmHP.ShowDialog();
         }
 
-        private void dataGridSinhVien_SelectionChanged(object sender, EventArgs e)
-        {
-        }
 
         private void bindingSVToTextbox(DataGridViewRow rowSinhVien)
         {
@@ -281,10 +276,15 @@ namespace QuanLyThuTienHoc
         private void dataGridSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgvSinhVien = sender as DataGridView;
-            bindingSVToTextbox(dgvSinhVien.CurrentRow);
-            lockControls();
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+
+            if(e.RowIndex < dgvSinhVien.RowCount - 1)
+            {
+                bindingSVToTextbox(dgvSinhVien.CurrentRow);
+                lockControls();
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+            
         }
 
         private void unlockButton()

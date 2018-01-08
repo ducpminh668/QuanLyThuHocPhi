@@ -18,7 +18,33 @@ namespace QuanLyThuTienHoc.Forms
             InitializeComponent();
             conn = new SqlConnection(connectionString);
             loadAllSV();
-            
+            loadCbLop();
+        }
+
+        private void loadCbLop()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "sp_getAllLop";
+                command.Connection = conn;
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataSet, "Lop");
+
+                cbLop.DataSource = dataSet.Tables["Lop"];
+                cbLop.DisplayMember = "TenLop";
+                cbLop.ValueMember = "MaLop";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void loadAllSV()
@@ -62,35 +88,14 @@ namespace QuanLyThuTienHoc.Forms
             }
         }
 
-        private void txtTimKiem_TextChanged(object sender, System.EventArgs e)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand command = new SqlCommand();
-                command.CommandType = CommandType.StoredProcedure;
-                command.CommandText = "sp_searchSVByName";
-                command.Parameters.AddWithValue("@name", txtTimKiem.Text);
-                command.Connection = conn;
-                adapter = new SqlDataAdapter(command);
-                dataSet.Reset();
-                adapter.Fill(dataSet);
-                dataGridSinhVien.DataSource = dataSet.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
+      
         private void dataGridSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgvSinhVien = sender as DataGridView;
-            bindingSVToTextbox(dgvSinhVien.CurrentRow);
+            if (e.RowIndex < dgvSinhVien.RowCount - 1)
+            {
+                bindingSVToTextbox(dgvSinhVien.CurrentRow);
+            }
         }
 
         private void bindingSVToTextbox(DataGridViewRow currentRow)
@@ -101,8 +106,38 @@ namespace QuanLyThuTienHoc.Forms
 
         private void btnInBienLai_Click(object sender, EventArgs e)
         {
-            frmChiTietBienLai frmCT = new frmChiTietBienLai(txtMaSV.Text, txtTenSV.Text,Convert.ToInt32(cbHocKy.SelectedItem));
+            frmChiTietBienLai frmCT = new frmChiTietBienLai(txtMaSV.Text, txtTenSV.Text, Convert.ToInt32(cbHocKy.SelectedItem));
             frmCT.ShowDialog();
+        }
+
+        private void cbLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbLop_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "sp_layChiTietMonHoc";
+                command.Parameters.AddWithValue("@malop", cbLop.SelectedValue);
+                command.Connection = conn;
+                adapter = new SqlDataAdapter(command);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dataGridChiTiet.DataSource = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
