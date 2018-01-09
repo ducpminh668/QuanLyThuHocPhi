@@ -35,9 +35,13 @@
             this.dataGridSinhVien = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMienGiam = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +68,7 @@
             this.txtMaSV.Enabled = false;
             this.txtMaSV.Location = new System.Drawing.Point(107, 35);
             this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(276, 26);
+            this.txtMaSV.Size = new System.Drawing.Size(342, 26);
             this.txtMaSV.TabIndex = 1;
             // 
             // txtHoTen
@@ -72,22 +76,22 @@
             this.txtHoTen.Enabled = false;
             this.txtHoTen.Location = new System.Drawing.Point(107, 83);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(276, 26);
+            this.txtHoTen.Size = new System.Drawing.Size(342, 26);
             this.txtHoTen.TabIndex = 1;
             // 
             // dataGridSinhVien
             // 
             this.dataGridSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridSinhVien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridSinhVien.Location = new System.Drawing.Point(0, 170);
+            this.dataGridSinhVien.Location = new System.Drawing.Point(0, 227);
             this.dataGridSinhVien.Name = "dataGridSinhVien";
             this.dataGridSinhVien.RowTemplate.Height = 28;
-            this.dataGridSinhVien.Size = new System.Drawing.Size(544, 217);
+            this.dataGridSinhVien.Size = new System.Drawing.Size(645, 300);
             this.dataGridSinhVien.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(389, 35);
+            this.button1.Location = new System.Drawing.Point(476, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 74);
             this.button1.TabIndex = 3;
@@ -97,43 +101,80 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 130);
+            this.label3.Location = new System.Drawing.Point(326, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "So tien mien giam:";
             // 
-            // textBox1
+            // txtMienGiam
             // 
-            this.textBox1.Location = new System.Drawing.Point(169, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtMienGiam.Location = new System.Drawing.Point(471, 129);
+            this.txtMienGiam.Name = "txtMienGiam";
+            this.txtMienGiam.Size = new System.Drawing.Size(148, 26);
+            this.txtMienGiam.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(313, 133);
+            this.label4.Location = new System.Drawing.Point(370, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tong tien:";
             // 
-            // textBox2
+            // txtTongTien
             // 
-            this.textBox2.Location = new System.Drawing.Point(389, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 26);
-            this.textBox2.TabIndex = 7;
+            this.txtTongTien.Location = new System.Drawing.Point(471, 175);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(148, 26);
+            this.txtTongTien.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Gioi Tinh";
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(107, 129);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(200, 26);
+            this.txtGioiTinh.TabIndex = 9;
+            // 
+            // dtpkNgaySinh
+            // 
+            this.dtpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgaySinh.Location = new System.Drawing.Point(107, 173);
+            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
+            this.dtpkNgaySinh.Size = new System.Drawing.Size(200, 26);
+            this.dtpkNgaySinh.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 175);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Ngay Sinh";
             // 
             // frmChiTietBienLai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 387);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(645, 527);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpkNgaySinh);
+            this.Controls.Add(this.txtGioiTinh);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMienGiam);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridSinhVien);
@@ -159,8 +200,12 @@
         private System.Windows.Forms.DataGridView dataGridSinhVien;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMienGiam;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtGioiTinh;
+        private System.Windows.Forms.DateTimePicker dtpkNgaySinh;
+        private System.Windows.Forms.Label label6;
     }
 }

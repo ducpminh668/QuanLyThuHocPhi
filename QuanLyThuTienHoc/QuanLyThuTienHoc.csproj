@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\BienLai.cs" />
+    <Compile Include="Class\MonHoc.cs" />
     <Compile Include="Forms\frmChiTietBienLai.cs">
       <SubType>Form</SubType>
     </Compile>

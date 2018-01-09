@@ -38,17 +38,23 @@
             this.cbHocKy = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNamHoc = new System.Windows.Forms.TextBox();
             this.cbLop = new System.Windows.Forms.ComboBox();
             this.dataGridChiTiet = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChiTiet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 130);
+            this.label1.Location = new System.Drawing.Point(59, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 1;
@@ -57,17 +63,17 @@
             // dataGridSinhVien
             // 
             this.dataGridSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSinhVien.Location = new System.Drawing.Point(-6, 176);
+            this.dataGridSinhVien.Location = new System.Drawing.Point(0, 25);
             this.dataGridSinhVien.Name = "dataGridSinhVien";
             this.dataGridSinhVien.RowTemplate.Height = 28;
             this.dataGridSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridSinhVien.Size = new System.Drawing.Size(518, 315);
+            this.dataGridSinhVien.Size = new System.Drawing.Size(638, 317);
             this.dataGridSinhVien.TabIndex = 2;
             this.dataGridSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSinhVien_CellClick);
             // 
             // btnInBienLai
             // 
-            this.btnInBienLai.Location = new System.Drawing.Point(548, 116);
+            this.btnInBienLai.Location = new System.Drawing.Point(970, 111);
             this.btnInBienLai.Name = "btnInBienLai";
             this.btnInBienLai.Size = new System.Drawing.Size(220, 51);
             this.btnInBienLai.TabIndex = 3;
@@ -114,22 +120,16 @@
             this.cbHocKy.FormattingEnabled = true;
             this.cbHocKy.Items.AddRange(new object[] {
             "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbHocKy.Location = new System.Drawing.Point(624, 34);
+            "2"});
+            this.cbHocKy.Location = new System.Drawing.Point(1020, 29);
             this.cbHocKy.Name = "cbHocKy";
-            this.cbHocKy.Size = new System.Drawing.Size(144, 28);
+            this.cbHocKy.Size = new System.Drawing.Size(151, 28);
             this.cbHocKy.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(525, 34);
+            this.label4.Location = new System.Drawing.Point(935, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 5;
@@ -138,47 +138,94 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(529, 75);
+            this.label5.Location = new System.Drawing.Point(917, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "NamHoc";
             // 
-            // textBox1
+            // txtNamHoc
             // 
-            this.textBox1.Location = new System.Drawing.Point(624, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 26);
-            this.textBox1.TabIndex = 9;
+            this.txtNamHoc.Location = new System.Drawing.Point(1020, 70);
+            this.txtNamHoc.Name = "txtNamHoc";
+            this.txtNamHoc.Size = new System.Drawing.Size(151, 26);
+            this.txtNamHoc.TabIndex = 9;
             // 
             // cbLop
             // 
             this.cbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLop.FormattingEnabled = true;
-            this.cbLop.Location = new System.Drawing.Point(130, 134);
+            this.cbLop.Location = new System.Drawing.Point(130, 123);
             this.cbLop.Name = "cbLop";
             this.cbLop.Size = new System.Drawing.Size(278, 28);
             this.cbLop.TabIndex = 10;
-            this.cbLop.SelectedIndexChanged += new System.EventHandler(this.cbLop_SelectedIndexChanged);
             this.cbLop.SelectionChangeCommitted += new System.EventHandler(this.cbLop_SelectionChangeCommitted);
             // 
             // dataGridChiTiet
             // 
             this.dataGridChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridChiTiet.Location = new System.Drawing.Point(518, 176);
+            this.dataGridChiTiet.Location = new System.Drawing.Point(643, 25);
             this.dataGridChiTiet.Name = "dataGridChiTiet";
             this.dataGridChiTiet.RowTemplate.Height = 28;
-            this.dataGridChiTiet.Size = new System.Drawing.Size(344, 315);
+            this.dataGridChiTiet.Size = new System.Drawing.Size(759, 317);
             this.dataGridChiTiet.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(549, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Gioi Tinh";
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(645, 34);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(155, 26);
+            this.txtGioiTinh.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(549, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Ngay Sinh";
+            // 
+            // dtpkNgaySinh
+            // 
+            this.dtpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgaySinh.Location = new System.Drawing.Point(645, 77);
+            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
+            this.dtpkNgaySinh.Size = new System.Drawing.Size(155, 26);
+            this.dtpkNgaySinh.TabIndex = 14;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridSinhVien);
+            this.groupBox1.Controls.Add(this.dataGridChiTiet);
+            this.groupBox1.Location = new System.Drawing.Point(2, 192);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1408, 340);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // frmQLDongHocPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 494);
-            this.Controls.Add(this.dataGridChiTiet);
+            this.ClientSize = new System.Drawing.Size(1408, 535);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dtpkNgaySinh);
+            this.Controls.Add(this.txtGioiTinh);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbLop);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNamHoc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbHocKy);
             this.Controls.Add(this.txtTenSV);
@@ -187,12 +234,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnInBienLai);
-            this.Controls.Add(this.dataGridSinhVien);
             this.Controls.Add(this.label1);
             this.Name = "frmQLDongHocPhi";
             this.Text = "frmQLDongHocPhi";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSinhVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChiTiet)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,8 +256,13 @@
         private System.Windows.Forms.ComboBox cbHocKy;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNamHoc;
         private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.DataGridView dataGridChiTiet;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtGioiTinh;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpkNgaySinh;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
